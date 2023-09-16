@@ -1,33 +1,38 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import Header from './Component/Header/index'
+import './style.css'
+import '../public/css/font-awesome.min.css'
+import '../public/css/meanmenu.min.css'
+import '../public/css/normalize.css'
+import '../public/css/main.css'
+import '../public/css/custom-slider/css/nivo-slider.css'
+import '../public/css/custom-slider/css/preview.css'
+import '../public/css/flaticon.css'
+import '../public/css/animate.css'
+import '../public/css/site.css'
+import '../public/css/hover-min.css'
+import '../public/css/magnific-popup.css'
+import '../public/css/animate.css'
+import Footer from './Component/Footer/index'
+import Main from './Component/Main/index'
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+      <div className="wrapper">
+        {/* Start Header area */}
+        <Header />
+        {/* End Header area */}
+
+        {/*Start Main body details  */}
+        <Main />
+        {/*End Main body details  */}
+
+        {/* Start footer Area */}
+        <Footer />
+        {/* End copyright area */}
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
     </>
   )
 }
